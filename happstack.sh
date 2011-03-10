@@ -20,11 +20,13 @@ case "$1" in
     ;;
   stop)
     echo "Stopping Happstack..."
-    killall doeshappstackwork.hs
+    killall runghc
+    killall ghc
     ;;
   restart)
     echo "Restarting Happstack..."
-    killall doeshappstackwork.hs
+    killall runghc
+    killall ghc
     $HAPPSTACK_DIR/doeshappstackwork.hs > /dev/null 2>&1 &
     ;;
   *)
