@@ -4,10 +4,11 @@
 
 module Main where
 
-import Happstack.Server (nullConf, simpleHTTP, ok, toResponse)
+import Control.Monad (msum)
+import Happstack.Server hiding (body)
 import Prelude hiding (head, id, div)
 import Text.Blaze.Html5 hiding (map, style)
-import Text.Blaze.Html5.Attributes hiding (title)
+import Text.Blaze.Html5.Attributes hiding (title, dir)
 import Text.Blaze.Renderer.Utf8 (renderHtml)
 
 import Data.String.Utils (join)
@@ -19,6 +20,7 @@ page = docTypeHtml $ do
 	head $ do
 		title "Does Happstack Work?"
 		meta ! httpEquiv "Content-Type" ! content "text/html;charset=utf-8"
+		link ! rel "favorites icon" ! href "/public/favicon.ico"
 	body ! style "text-align: center;" $ do
 		p $ a ! href "https://github.com/mcandre/doeshappstackwork" $ "GitHub"
 		h1 "Does Happstack Work?"
@@ -36,4 +38,7 @@ page = docTypeHtml $ do
 			x -> x
 
 main :: IO ()
-main = (simpleHTTP nullConf . ok . toResponse) page
+main = simpleHTTP nullConf $ msum [
+		dir "public" $ serveDirectory EnableBrowsing [] "public",
+		ok $ toResponse page
+	]
