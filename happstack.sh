@@ -16,18 +16,16 @@ HAPPSTACK_DIR=/srv/d_hactar/usr/src/doeshappstackwork
 case "$1" in
   start)
     echo "Starting Happstack..."
-    $HAPPSTACK_DIR/doeshappstackwork.hs > /dev/null 2>&1 &
+    $HAPPSTACK_DIR/doeshappstackwork > /dev/null 2>&1 &
     ;;
   stop)
     echo "Stopping Happstack..."
-    killall runghc
-    killall ghc
+    killall doeshappstackwork
     ;;
   restart)
     echo "Restarting Happstack..."
-    killall runghc
-    killall ghc
-    $HAPPSTACK_DIR/doeshappstackwork.hs > /dev/null 2>&1 &
+    killall doeshappstackwork
+    $HAPPSTACK_DIR/doeshappstackwork > /dev/null 2>&1 &
     ;;
   *)
     echo "Usage: $0 start|stop|restart"

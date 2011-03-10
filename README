@@ -13,6 +13,6 @@ REQUIREMENTS
 
 SETUP
 
- 1. Run chmod a+x doeshappstackwork.hs
- 2. Run ./doeshappstackwork.hs
+ 1. Run make
+ 2. Run ./doeshappstackwork
  3. Open http://localhost:8000/
