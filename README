@@ -1,0 +1,15 @@
+doeshappstackwork - Test Happstack on your system
+
+HOMEPAGE
+
+http://doeshappstackwork.yellosoft.us/
+
+INSTALL
+
+ 1. Run git clone https://github.com/mcandre/doeshappstackwork.git
+ 2. Run chmod a+x doeshappstackwork.hs
+ 3. Edit happstack.sh
+ 4. Modify $HAPPSTACK_DIR to point to this directory
+ 5. Follow daemon installation instructions
+ 6. Run /etc/init.d/happstack start
+ 7. Open http://localhost:8000/
