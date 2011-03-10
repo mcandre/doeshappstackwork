@@ -13,7 +13,6 @@ REQUIREMENTS
 
 SETUP
 
- 1. Run git clone https://github.com/mcandre/doeshappstackwork.git
- 2. Run chmod a+x doeshappstackwork.hs
- 3. Run ./doeshappstackwork.hs
- 4. Open http://localhost:8000/
+ 1. Run chmod a+x doeshappstackwork.hs
+ 2. Run ./doeshappstackwork.hs
+ 3. Open http://localhost:8000/
