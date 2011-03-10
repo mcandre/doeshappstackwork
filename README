@@ -4,13 +4,16 @@ HOMEPAGE
 
 http://doeshappstackwork.yellosoft.us/
 
-INSTALL
+REQUIREMENTS
 
- 1. Run cabal install happstack blaze-html missingh
- 2. Run git clone https://github.com/mcandre/doeshappstackwork.git
- 3. Run chmod a+x doeshappstackwork.hs
- 4. Edit happstack.sh
- 5. Modify $HAPPSTACK_DIR to point to this directory
- 6. Follow daemon installation instructions
- 7. Run /etc/init.d/happstack start
- 8. Open http://localhost:8000/
+ - Haskell Platform
+ - happstack
+ - blaze-html
+ - missingh
+
+SETUP
+
+ 1. Run git clone https://github.com/mcandre/doeshappstackwork.git
+ 2. Run chmod a+x doeshappstackwork.hs
+ 3. Run ./doeshappstackwork.hs
+ 4. Open http://localhost:8000/
