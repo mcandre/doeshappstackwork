@@ -7,7 +7,7 @@ http://doeshappstackwork.yellosoft.us/
 REQUIREMENTS
 
  - Haskell Platform
- - happstack
+ - happstack-server
  - blaze-html
  - missingh
 
