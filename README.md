@@ -14,5 +14,5 @@
 ## SETUP
 
  1. Run make
- 2. Run ./doeshappstackwork
- 3. Open http://localhost:8000/
+ 2. Run `./doeshappstackwork`
+ 3. Open [http://localhost:8000/](http://localhost:8000/)
